@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Last Name</th>
+    <th>Group</th>
+    <th>Mark</th>
+    <th>City</th>
+  </tr>
+{% for student in students %}
+  <tr>
+    <td>{{ student.id }}</td>
+    <td>{{ student.name }}</td>
+    <td>{{ student.last_name }}</td>
+    <td>{{ student.group }}</td>
+    <td>{{ student.mark }}</td>
+    <td>{{ student.city }}</td>
+  </tr><br>
+{% endfor %}
+</table>
+
+{% endblock %}
