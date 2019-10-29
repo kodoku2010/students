@@ -1,3 +1,15 @@
+.btn-add-student {
+    text-decoration: none;
+    background-color: #F5D7BF;
+    padding: 5px 10px;
+}
+
+.btn-add-student:hover {
+    text-decoration: none;
+}
+
+/* TABLE STYLES */
+
 table {
     margin: 0 auto;
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
@@ -19,3 +31,18 @@ td {
     background: #F5D7BF;
     padding: 10px;
 }
+
+/* FORM STYLES */
+
+form {
+    margin: 0 auto;
+}
+
+form > input::placeholder {
+
+    text-align: center;
+
+}
+
+
+

@@ -3,36 +3,37 @@
 {% load static %}
 
 {% block content %}
-
-<form action="{% url 'add-student' %}" method="post" >
-    {% csrf_token %}
+<div class="form-wrapper">
+    <form action="{% url 'add-student' %}" method="post" >
+        {% csrf_token %}
     
-    <label for="name"></label>
-    <input type="text" name="name" id="name" placeholder="Имя" /><br>
+        <label for="name">Имя</label>
+        <input type="text" name="name" id="name" placeholder="Введите имя" /><br>
 
-    <label for="last_name"></label>
-    <input type="text" name="last_name" id="last_name" placeholder="Фамилия"/><br>
+        <label for="last_name">Фамилия</label>
+        <input type="text" name="last_name" id="last_name" placeholder="Введите фамилию"/><br>
 
-    <label for="email"></label>
-    <input type="text" name="email" id="email" placeholder="E-mail"/><br>
+        <label for="email">Почта</label>
+        <input type="text" name="email" id="email" placeholder="Введите е-mail"/><br>
 
-    <label for="group"></label>
-    <input type="text" name="group" id="group" placeholder="Номер группы"/><br>
+        <label for="group">Группа</label>
+        <input type="text" name="group" id="group" placeholder="Введите номер группы"/><br>
 
-    <label for="mark"></label>
-    <input type="text" name="mark" id="mark" placeholder="Количество баллов"/><br>
+        <label for="mark">Баллы</label>
+        <input type="text" name="mark" id="mark" placeholder="Введите количество баллов"/><br>
 
-    <label for="city"></label>
-    <input type="text" name="city" id="city" placeholder="Город"/><br>
+        <label for="city">Город</label>
+        <input type="text" name="city" id="city" placeholder="Введите город"/><br>
 
-    <label for="year"></label>
-    <input type="text" name="year" id="year" placeholder="Год рождения"/><br>
+        <label for="year">Год</label>
+        <input type="text" name="year" id="year" placeholder="Введите год рождения"/><br>
 
-    <label for="gender"></label>
-    <input type="radio" name="gender" id="gender" value="Муж" />Муж
-    <input type="radio" name="gender" id="gender" value="Жен"/>Жен<br>
+        <label for="gender"></label>
+        <input type="radio" name="gender" id="gender" value="Муж" />Муж
+        <input type="radio" name="gender" id="gender" value="Жен"/>Жен<br>
 
-    <input type="submit" value="Сохранить"/>
-</form>
+        <input type="submit" value="Сохранить"/>
+    </form>
+</div>
 
 {% endblock %}
