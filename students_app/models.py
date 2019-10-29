@@ -9,6 +9,7 @@ class Student(models.Model):
     mark = models.IntegerField()
     city = models.CharField(max_length=100)
     year = models.IntegerField()
-    gender = models.BooleanField(default=True)
+    gender = models.BooleanField()
     def __str__(self):
         return self.name + self.last_name
+

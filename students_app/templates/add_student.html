@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<form action="{% url 'add-student' %}" method="post" >
+    {% csrf_token %}
+    
+    <label for="name"></label>
+    <input type="text" name="name" id="name" placeholder="Имя" /><br>
+
+    <label for="last_name"></label>
+    <input type="text" name="last_name" id="last_name" placeholder="Фамилия"/><br>
+
+    <label for="email"></label>
+    <input type="text" name="email" id="email" placeholder="E-mail"/><br>
+
+    <label for="group"></label>
+    <input type="text" name="group" id="group" placeholder="Номер группы"/><br>
+
+    <label for="mark"></label>
+    <input type="text" name="mark" id="mark" placeholder="Количество баллов"/><br>
+
+    <label for="city"></label>
+    <input type="text" name="city" id="city" placeholder="Город"/><br>
+
+    <label for="year"></label>
+    <input type="text" name="year" id="year" placeholder="Год рождения"/><br>
+
+    <label for="gender"></label>
+    <input type="radio" name="gender" id="gender" value="Муж" />Муж
+    <input type="radio" name="gender" id="gender" value="Жен"/>Жен<br>
+
+    <input type="submit" value="Сохранить"/>
+</form>
+
+{% endblock %}
