@@ -1,10 +1,23 @@
-.btn-add-student {
-    text-decoration: none;
-    background-color: #F5D7BF;
-    padding: 5px 10px;
+
+.btn-wrapper {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: -180px;
 }
 
-.btn-add-student:hover {
+a.btn {
+    width: 300px;
+    font-size: 25px;
+    margin: 0 auto;
+    text-decoration: none;
+    background-color: #F5D7BF;
+    padding: 10px 20px 15px;
+    color: #656665;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    color: black;
     text-decoration: none;
 }
 
@@ -32,10 +45,74 @@ td {
     padding: 10px;
 }
 
-/* FORM STYLES */
+form > table {
+    width: 600px;
+    margin: auto;
+    margin-top: 220px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 10px;
+    background: #ECE9E0;
+    color: #656665;
+    border: 16px solid #ECE9E0;
+    border-radius: 20px;
+}
+
+input {
+    width: 100%;
+	font-size: 13px;
+	padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 8px;
+}
+
+
+.input-checkbox {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.checkbox-span {
+    margin-left: 10px;
+}
+
+.btn-submit {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-submit:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* FORM STYLES
+
+.from-wrapper {
+    text-align:center;
+    position: relative;
+}
 
 form {
-    margin: 0 auto;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+}
+
+form > label {
+    float: left;
+    width: 200px;
+    margin-right: 50px;
+}
+
+form > input {
+    margin-bottom: 10px;
+    width: 350px;
+    border-radius: 4px;
 }
 
 form > input::placeholder {
@@ -44,5 +121,13 @@ form > input::placeholder {
 
 }
 
+form > .input-checkbox {
+    width: 50px;
+    margin-right: 0;
+}
 
+.btn-submit {
+    margin: 40px 130px;
+}
+*/
 
