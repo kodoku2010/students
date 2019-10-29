@@ -30,7 +30,7 @@ def add_student(request):
         student = Student(name=name, last_name=last_name, email=email, group=
                           group, mark=mark, city=city, year=year, gender=gender)
         student.save()
-
+        
         return redirect('/')
     else:
         return render(request, 'add_student.html', {})
