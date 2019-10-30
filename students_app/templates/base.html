@@ -10,6 +10,24 @@
     <title></title>
   </head>
   <body>
+    <header>
+
+      <nav class="nav">
+          <form method="GET" action="{% url 'search' %}" id="searchform" class="search-form">
+              <input class="searchfield" id="searchbox" name="q" type="text" value="{{ request.GET.q }}" placeholder="Search..."/>
+          </form>
+
+          <div class="btn-add-student">
+              <a href="/add_student/" class="btn">Добавить Студента</a>
+          </div>
+
+          <div class="btn-student-list">
+              <a href="/" class="btn">Список студентов</a>
+          </div>
+
+      </nav>
+
+    </header>
     {% block content %}
     {% endblock %}
   </body>

@@ -1,8 +1,21 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
+
+from django.http import HttpResponse
 
 from .models import Student
 
-# Create your views here.
+def search_form(request):
+    return render_to_response('index.html')
+
+def search(request):
+    if 'q' in request.GET and request.GET['q']:
+        q = request.GET['q']
+        students = Student.objects.filter(last_name__icontains=q)
+        return render_to_response('search_results.html',
+            {'students': students, 'query': q})
+    else:
+        return HttpResponse('Please submit a search term.')
+
 def index(request):
     students = Student.objects.all()
     context = {
@@ -28,9 +41,9 @@ def add_student(request):
 
 
         student = Student(name=name, last_name=last_name, email=email, group=
-                          group, mark=mark, city=city, year=year, gender=gender)
+                            group, mark=mark, city=city, year=year, gender=gender)
         student.save()
-        
+
         return redirect('/')
     else:
         return render(request, 'add_student.html', {})

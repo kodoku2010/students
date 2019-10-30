@@ -13,7 +13,7 @@ class Student(models.Model):
 
     def __str__(self):
         return self.name + self.last_name
-    
+
     class Meta:
         ordering = ["-mark"]
 

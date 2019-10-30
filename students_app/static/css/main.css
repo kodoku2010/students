@@ -1,10 +1,19 @@
+/* HEADER */
 
-.btn-wrapper {
+nav.nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.btn-add-student,
+.btn-student-list {
     text-align: center;
     margin-top: 50px;
 }
 
-a.btn {
+.btn-add-student,
+.btn-student-list {
     width: 300px;
     font-size: 25px;
     margin: 0 auto;
@@ -15,9 +24,14 @@ a.btn {
     border-radius: 5px;
 }
 
-.btn:hover{
+.btn-add-student:hover,
+.btn-student-list:hover {
     color: black;
     text-decoration: none;
+}
+
+.searchfield {
+    padding: 10px 20px 15px;
 }
 
 /* TABLE STYLES */
