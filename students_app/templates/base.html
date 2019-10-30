@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="https://kit.fontawesome.com/91687c1c00.js"></script>
     <title></title>
   </head>
   <body>
@@ -14,15 +15,18 @@
 
       <nav class="nav">
           <form method="GET" action="{% url 'search' %}" id="searchform" class="search-form">
-              <input class="searchfield" id="searchbox" name="q" type="text" value="{{ request.GET.q }}" placeholder="Search..."/>
-          </form>
+              <input class="searchfield" id="searchbox" name="q" type="text" value="{{ request.GET.q }}" placeholder="Поиск..."/>
+              <button type="submit" class="btn btn-inline">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
 
           <div class="btn-add-student">
-              <a href="/add_student/" class="btn">Добавить Студента</a>
+              <a href="/add_student/" class="">Добавить Студента</a>
           </div>
 
           <div class="btn-student-list">
-              <a href="/" class="btn">Список студентов</a>
+              <a href="/" class="">Список студентов</a>
           </div>
 
       </nav>

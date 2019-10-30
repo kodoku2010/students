@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, render_to_response
+from django.db.models import Q
 
 from django.http import HttpResponse
 
@@ -10,7 +11,13 @@ def search_form(request):
 def search(request):
     if 'q' in request.GET and request.GET['q']:
         q = request.GET['q']
-        students = Student.objects.filter(last_name__icontains=q)
+        students = Student.objects.filter(
+            Q(name__icontains=q)|
+            Q(last_name__icontains=q)|
+            Q(group__icontains=q)|
+            Q(mark__icontains=q)|
+            Q(city__icontains=q)
+        )
         return render_to_response('search_results.html',
             {'students': students, 'query': q})
     else:
