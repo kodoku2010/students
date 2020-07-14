@@ -9,7 +9,8 @@ def search_form(request):
     return render_to_response('index.html')
 
 def search(request):
-    """Function for search students"""
+    """View function for search students in database by next fields: name, last name, 
+    group number, marks, city"""
     if 'q' in request.GET and request.GET['q']:
         q = request.GET['q']
         students = Student.objects.filter(
@@ -24,7 +25,9 @@ def search(request):
     else:
         return HttpResponse('Please submit a search term.')
 
+
 def index(request):
+    """View function for render main page and show full list of students"""
     students = Student.objects.all()
     context = {
         'students': students
@@ -32,7 +35,9 @@ def index(request):
 
     return render(request, 'index.html', context)
 
+
 def add_student(request):
+    """View function for adding students in database"""
     if (request.method == "POST"):
         name = request.POST['name']
         last_name = request.POST['last_name']
@@ -46,7 +51,6 @@ def add_student(request):
             gender = True
         else:
             gender = False
-
 
         student = Student(name=name, last_name=last_name, email=email, group=
                             group, mark=mark, city=city, year=year, gender=gender)
